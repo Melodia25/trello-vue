@@ -1,5 +1,5 @@
 export default{
-    template: `<input class="form-control" placeholder="Nombre de la lista" v-bind:value="value" v-on:input="$emit('input', $event.target.value)">`,
+    template: `<input class="form-control" placeholder="Name of List" v-bind:value="value" v-on:input="$emit('input', $event.target.value)">`,
     props: ['value']
 }
 

@@ -29,7 +29,7 @@
                                 Eliminar
                             </button> -->
                             <button :class="list.status == 'creating' ? 'btn-warning' : 'btn-danger'" class="btn btn-sm" @click="removeList(index)">
-                                {{ list.status == 'creating' ? 'Cancelar' : 'Eliminar' }}
+                                {{ list.status == 'creating' ? 'Cancel' : 'Delete' }}
                             </button>
                         </div>
                     </div>
@@ -41,7 +41,7 @@
                                 <!-- Termina componente card -->
                             </div>
                             <button v-if="list.status == 'creating'" class="btn btn-primary btn-block">
-                                Guardar
+                                Saved
                             </button>
                             <!-- Agregar tarjeta -->
                             <div class="form-group d-flex" v-for="(card, idx) in list.cards" :key="idx">
@@ -53,14 +53,14 @@
                                 <v-icon left style="font-size: 1.5rem; text-decoration: none; margin-top: -2px" @click="deleteTitle(list, idx)">mdi-delete</v-icon>
 
                             </div>
-                            <button v-if="list.status == 'saved'" class="btn btn-success btn-block" @click="addCard(list)">Agregar tarjeta</button>
+                            <button v-if="list.status == 'saved'" class="btn btn-success btn-block" @click="addCard(list)">Add Card</button>
                         </form>
                     </div>
                 </div>
             </div>
             <div class="col-md-4 mt-3">
                 <button class="btn rounded-0 btn-outline-dark btn-block" @click="addList">
-                    Agregar lista
+                    Add List
                 </button><br>
             </div>
         </div>

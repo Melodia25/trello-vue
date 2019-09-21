@@ -1,5 +1,5 @@
 export default{
-    template: `<input class="form-control" placeholder="Descripción de la tarjeta" style="width: 100%" v-bind:value="value" v-on:input="$emit('input', $event.target.value)" :readonly="readonly">`,
+    template: `<input class="form-control" placeholder="Descripction of card" style="width: 100%" v-bind:value="value" v-on:input="$emit('input', $event.target.value)" :readonly="readonly">`,
     props: ['value', 'readonly']
 }
 
